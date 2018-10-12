@@ -2,3 +2,18 @@ html {
     text-align: center;
 }
 
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+img {
+    width: 150px;
+    height: 200px;
+}
