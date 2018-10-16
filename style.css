@@ -3,14 +3,43 @@ html {
     background: linear-gradient(
         to right,
         white 0%,
-        maroon 25%,
-        white 50%,
-        maroon 75%,
+        lightblue 25%,
+        blue 50%,
+        lightblue 75%,
         white 100%
     );
 }
 
-button {
+.topnav {
+    overflow: hidden;
+}
+
+.checkout {
+    width: 25px;
+    height: 25px;
+}
+
+.topnav a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    border: 2px solid black;
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.topnav a.active {
+    color: black;
+}
+
+.btn {
+    border-color: black;
+    border-radius: 25px;
     color: white;
     background: linear-gradient(
         to right,
@@ -19,7 +48,7 @@ button {
         navy 50%,
         maroon 75%,
         navy 100%
-    )
+    );
 }
 
 /*h1 {
@@ -43,6 +72,7 @@ img {
 }
 
 .dropbtn {
+    border-radius: 25px;
     align-self: center;
     background-color: black;
     color: red;
@@ -63,6 +93,7 @@ img {
 }
 
 .dropdown-content {
+    border-radius: 15px;
     display: none;
     position: relative;
     background-color: white;
