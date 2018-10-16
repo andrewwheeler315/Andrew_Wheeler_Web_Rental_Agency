@@ -3,9 +3,9 @@ html {
     background: linear-gradient(
         to right,
         white 0%,
-        lightblue 25%,
-        blue 50%,
-        lightblue 75%,
+        #8d02b3 25%,
+        white 50%,
+        #8d02b3 75%,
         white 100%
     );
 }
@@ -40,14 +40,14 @@ html {
 .btn {
     border-color: black;
     border-radius: 25px;
-    color: white;
+    color: black;
     background: linear-gradient(
         to right,
-        navy 0%,
-        maroon 25%,
-        navy 50%,
-        maroon 75%,
-        navy 100%
+        pink 0%,
+        purple 25%,
+        pink 50%,
+        purple 75%,
+        pink 100%
     );
 }
 
