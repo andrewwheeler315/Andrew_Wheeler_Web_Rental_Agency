@@ -12,14 +12,14 @@ var movieTitle = [
 ];
 document.getElementById("movie_title").innerHTML = movieTitle;
 
-var bookTitle= [
+var bookTitle = [
     "39 Clues: The Maze of Bones",
     "The Maze Runner",
     "The Fellowship of the Ring",
     "Harry Potter and the Sorcerer's Stone",
     "Ranger's Apprentice: The Ruins of Gorlan",
     "39 Clues: Into the Gauntlet",
-    "The Death Cure", 
+    "The Death Cure",
     "The Return of the King",
     "Harry Potter and the Deathly Hollows",
     "Ranger's Apprentice: The Royal Ranger"
@@ -40,7 +40,6 @@ var mangaTitle = [
 ];
 document.getElementById("manga_title").innerHTML = mangaTitle;
 
-
 var gameTitle = [
     "Final Fantasy",
     "Gears of War",
@@ -55,3 +54,48 @@ var gameTitle = [
 ];
 document.getElementById("game_title").innerHTML = gameTitle;
 
+function alphaOnly(event) {
+    var key;
+    if (window.event) {
+        key = window.event.key;
+    } else if (e) {
+        key = e.which;
+    }
+    }
+}
+
+function emailValidation(mail) {
+    if (
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+            myForm.emailAddr.value
+        )
+    ) {
+        return true;
+    }
+    return false;
+}
+document.getElementById("email").innerHTML = emailValidation(mail);
+
+function phonenumber(inputtxt) {
+    var phoneno = /^\d{10}$/;
+    if (inputtxt.value.match(phoneno)) {
+        return value.match(/\d/g).length===10;
+    } else {
+        return false;
+    }
+}
+document.getElementById("phonenumber").innerHTML = phonenumber(inputtxt);
+
+function addressValidation(val) {
+    console.log("val: " + val);
+    var streetregex = /^[a-zA-Z0-9-\/] ?([a-zA-Z0-9-\/]|[a-zA-Z0-9-\/] )*[a-zA-Z0-9-\/]$/;
+    if (streetregex.test(val)) 
+    {
+        console.log("true");
+    } 
+    else 
+    {
+        console.log("false");
+    }
+}
+document.getElementById("address").innerHTML = addressValidation(val);
