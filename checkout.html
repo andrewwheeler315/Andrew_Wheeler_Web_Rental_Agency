@@ -5,6 +5,7 @@
     <title>Confirmation</title>
     <script type="text/javascript" src="main.js"></script>
     <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="bootstrap.css" type="text/css" rel="stylesheet">
     <h1>Purchase Confirmation</h1>
 </head>
 
@@ -16,16 +17,105 @@
         <a href="manga.html">Manga</a>
         <a href="games.html">Games</a>
         <a href="checkout.html"><img class="checkout" src="nav_items/checkout.png"></a>
-    </div>
-    <input type="name" id="name" placeholder="Please Place Your Name Here...">
-    <br /><br />
-    <input type="email" id="email" placeholder="Insert Email Here...">
-    <br /><br />
-    <input type="phonenumber" id="phonenumber" placeholder="Insert Phone Number Here...">
-    <br /><br />
-    <input type="address" id="address" placeholder="Please Place Your Address Here...">
-    <br />
-    <button type="submit" value="submit">Submit</button>
+    </div><br />
+    <ul class="errorMessages"></ul>
+    <form>
+        <div>
+            <label for="firstname">First Name:</label><br />
+            <input id="firstname" type="text" required>
+        </div>
+        <br />
+        <div>
+            <label for="lastname">Last Name:</label><br />
+            <input id="lastname" type="text" required>
+        </div>
+        <br />
+        <div>
+            <label for="email">Email:</label><br />
+            <input id="email" type="email" required>
+        </div>
+        <br />
+        <div>
+            <label for="phonenumber">Phone Number:</label><br />
+            <input id="phonenumber" type="text" required>
+        </div>
+        <br />
+        <div>
+            <label for="address">Street Address:</label><br />
+            <input id="address" type="text" required>
+        </div>
+        <br />
+        <div>
+            <label for="city">City:</label><br />
+            <input id="city" type="text" required>
+        </div>
+        <br />
+        <form>
+            <div class="form-group">
+                <label for="state">State Choice:</label><br />
+                <select class="splitbtn" id="state_choice">
+                    <option value="Alabama">AL</option>
+                    <option value="Alaska">AK</option>
+                    <option value="Arizona">AZ</option>
+                    <option value="Arkansas">AR</option>
+                    <option value="California">CA</option>
+                    <option value="Colorado">CO</option>
+                    <option value="Connecticut">CT</option>
+                    <option value="Delaware">DE</option>
+                    <option value="Florida">FL</option>
+                    <option value="Georgia">GA</option>
+                    <option value="Hawaii">HI</option>
+                    <option value="Idaho">ID</option>
+                    <option value="Illinois">IL</option>
+                    <option value="Indiana">IN</option>
+                    <option value="Iowa">IA</option>
+                    <option value="Kansas">KS</option>
+                    <option value="Kentucky">KY</option>
+                    <option value="Louisiana">LA</option>
+                    <option value="Maine">ME</option>
+                    <option value="Maryland">MD</option>
+                    <option value="Massachusetts">MA</option>
+                    <option value="Michigan">MI</option>
+                    <option value="Minnesota">MN</option>
+                    <option value="Mississippi">MS</option>
+                    <option value="Missouri">MO</option>
+                    <option value="Montana">MT</option>
+                    <option value="Nebraska">NE</option>
+                    <option value="Nevada">NV</option>
+                    <option value="New Hampshire">NH</option>
+                    <option value="New Jersey">NJ</option>
+                    <option value="New Mexico">NM</option>
+                    <option value="New York">NY</option>
+                    <option value="North Carolina">NC</option>
+                    <option value="North Dakota">ND</option>
+                    <option value="Ohio">OH</option>
+                    <option value="Oklahoma">OK</option>
+                    <option value="Oregon">OR</option>
+                    <option value="Pennsylvania">PA</option>
+                    <option value="Rhode Island">RI</option>
+                    <option value="South Carolina">SC</option>
+                    <option value="South Dakota">SD</option>
+                    <option value="Tennessee">TN</option>
+                    <option value="Texas">TX</option>
+                    <option value="Utah">UT</option>
+                    <option value="Vermont">VT</option>
+                    <option value="Virginia">VA</option>
+                    <option value="Washington">WA</option>
+                    <option value="West Virginia">WV</option>
+                    <option value="Wisconsin">WI</option>
+                    <option value="Wyoming">WY</option>
+                </select>
+            </div>
+        </form>
+        <br />
+        <div>
+            <label for="zip">Zip:</label><br />
+            <input id="zip" type="text" required>
+        </div>
+        <div class="buttons">
+            <button>Submit</button>
+        </div>
+    </form>
 </body>
 
 </html>

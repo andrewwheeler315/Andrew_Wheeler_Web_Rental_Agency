@@ -1,101 +1,100 @@
-var movieTitle = [
-    "Deadpool",
-    "Iron Man",
-    "Thor",
-    "Captain America: The First Avenger",
-    "The Avengers",
-    "Deadpool 2",
-    "Iron Man 3",
-    "Thor Ragnarok",
-    "Captain America: Civil War",
-    "The Avengers: Infinity War"
-];
-document.getElementById("movie_title").innerHTML = movieTitle;
-
-var bookTitle = [
-    "39 Clues: The Maze of Bones",
-    "The Maze Runner",
-    "The Fellowship of the Ring",
-    "Harry Potter and the Sorcerer's Stone",
-    "Ranger's Apprentice: The Ruins of Gorlan",
-    "39 Clues: Into the Gauntlet",
-    "The Death Cure",
-    "The Return of the King",
-    "Harry Potter and the Deathly Hollows",
-    "Ranger's Apprentice: The Royal Ranger"
-];
-document.getElementById("book_title").innerHTML = bookTitle;
-
-var mangaTitle = [
-    "Dragon Ball Vol. 1",
-    "Bleach Vol. 1",
-    "Naruto Vol. 1",
-    "Fairy Tail Vol. 1",
-    "One Piece Vol. 1",
-    "Dragon Ball Super Vol. 7",
-    "Bleach Vol. 74",
-    "Naruto Vol. 72",
-    "Fairy Tail Vol. 63",
-    "One Piece Vol. 84"
-];
-document.getElementById("manga_title").innerHTML = mangaTitle;
-
-var gameTitle = [
-    "Final Fantasy",
-    "Gears of War",
-    "God of War",
-    "Uncharted: Drake's Fortune",
-    "Resident Evil I",
-    "Final Fantasy XV",
-    "Gears of War 3",
-    "God of War 4",
-    "Uncharted 4: A Thief's End",
-    "Resident Evil VII: Biohazard"
-];
-document.getElementById("game_title").innerHTML = gameTitle;
-
-function alphaOnly(event) {
-    var key;
-    if (window.event) {
-        key = window.event.key;
-    } else if (e) {
-        key = e.which;
-    }
-    }
-}
-
-function emailValidation(mail) {
-    if (
-        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
-            myForm.emailAddr.value
-        )
-    ) {
+function inputAlphabet(inputtext, alertMsg) {
+    var alphaExp = /^[a-zA-Z]+$/;
+    if (inputtext.value.match(alphaExp)) {
         return true;
-    }
-    return false;
-}
-document.getElementById("email").innerHTML = emailValidation(mail);
-
-function phonenumber(inputtxt) {
-    var phoneno = /^\d{10}$/;
-    if (inputtxt.value.match(phoneno)) {
-        return value.match(/\d/g).length===10;
     } else {
+        document.getElementById("firstname").innerText = alertMsg;
+        inputtext.focus();
         return false;
     }
 }
-document.getElementById("phonenumber").innerHTML = phonenumber(inputtxt);
 
-function addressValidation(val) {
-    console.log("val: " + val);
-    var streetregex = /^[a-zA-Z0-9-\/] ?([a-zA-Z0-9-\/]|[a-zA-Z0-9-\/] )*[a-zA-Z0-9-\/]$/;
-    if (streetregex.test(val)) 
-    {
-        console.log("true");
-    } 
-    else 
-    {
-        console.log("false");
+function textNumeric(inputtext, alertMsg) {
+    var numericExpression = /^[0-9]+$/;
+    if (inputtext.value.match(numericExpression)) {
+        return true;
+    } else {
+        document.getElementById("phonenumber").innerText = alertMsg;
+        inputtext.focus();
+        return false;
     }
 }
-document.getElementById("address").innerHTML = addressValidation(val);
+
+function emailValidation(inputtext, alertMsg) {
+    var emailExp = /^[w-.+]+@[a-zA-Z0-9.-]+.[a-zA-z0-9]{2,4}$/;
+    if (inputtext.value.match(emailExp)) {
+        return true;
+    } else {
+        document.getElementById("p3").innerText = alertMsg;
+        inputtext.focus();
+        return false;
+    }
+}
+
+
+
+// var createAllErrors = function() {
+//     var form = $(this),
+//         errorList = $("ul.errorMessages", form);
+
+//     var showAllErrorMessages = function() {
+//         errorList.empty();
+
+//         var invalidFields = form.find(":invalid").each(function(index, node) {
+//             var label = $("label[for=" + node.id + "] "),
+//                 message = node.validationMessage || "Invalid value.";
+
+//             errorList
+//                 .show()
+//                 .append(
+//                     "<li><span>" + label.html() + "</span> " + message + "</li>"
+//                 );
+//         });
+//     };
+
+//     form.on("submit", function(event) {
+//         if (this.checkValidity && !this.checkValidity()) {
+//             $(this)
+//                 .find(":invalid")
+//                 .first()
+//                 .focus();
+//             event.preventDefault();
+//         }
+//     });
+
+//     $("input[type=submit], button:not([type=button])", form).on(
+//         "click",
+//         showAllErrorMessages
+//     );
+
+//     $("input", form).on("keypress", function(event) {
+//         var type = $(this).attr("type");
+//         if (
+//             /date|email|month|number|search|tel|text|time|url|week/.test(
+//                 type
+//             ) &&
+//             event.keyCode == 13
+//         ) {
+//             showAllErrorMessages();
+//         }
+//     });
+// };
+
+// $("form").each(createAllErrors);
+
+// public class MainClass
+// {
+//     public static void main( String[] args )
+//     {
+//         System.out.printIn(validateFirstName("Tom"));
+//         System.out.printIn(validateLastName("Tom"));
+//     }
+//     public static boolean validateFirstName( String firstName )
+//     {
+//         return firstName.matches( "[A-Z][a-zA-Z]*");
+//     }
+//     public static boolean validateLastName( String lastName )
+//     {
+//         return lastName.matches( "[a-zA-z]+([ '-][a-zA-Z]+)*")
+//     }
+// }
